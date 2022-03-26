@@ -1,0 +1,60 @@
+.todo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px 10px;
+  margin: 10px 10px;
+  border-bottom: 1px solid grey;
+}
+h2 {
+    padding: 10px 10px;
+  margin: 10px 10px;
+}
+.row {
+    flex-direction: row;
+  display: flex;
+}
+.id {
+margin: 0 10px;
+}
+.completed div{
+  text-decoration: line-through;
+}
+input {
+  margin: 0 20px;
+}
+input[type="submit"] {
+  background-color: aquamarine;
+  padding:  5px 10px;
+  border: none;
+  border-radius: 5px;
+}
+.row button {
+  border: none;
+  background-color:cornflowerblue;
+  padding: 10px;
+  margin: 10px;
+  height: 39px;
+  width: 39px;
+  border-radius: 1px;
+}
+.row button:hover {
+  border: none;
+  background-color:white;
+
+  padding: 10px;
+  margin: 10px;
+  height: 39px;
+  width: 39px;
+  color: cornflowerblue;
+  cursor: pointer;
+  border-radius: 1px;
+  border:1px solid cornflowerblue;
+}
+.calculator input {
+  width: 200px ;
+  align-self: flex-start;
+}
+
+
+

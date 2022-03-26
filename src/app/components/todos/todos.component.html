@@ -1,0 +1,39 @@
+ <form #f="ngForm">
+   <input placeholder="nom" type="text" name="nom" #nom="ngModel" ngModel required>
+   <input email="true" placeholder="email" type="email" name="email" #email="ngModel" ngModel required>
+   <input placeholder="phone" pattern="553525934" name="phone" #phone="ngModel" ngModel required>
+   <button type="submit" [disabled]="!f.valid">Submit</button>
+   <div *ngIf="nom.touched && nom.errors?.['required']">ce chaamp est obligatoire</div>
+   <div *ngIf="email.touched && email.errors?.['email']">enter a correct email</div>
+   <div *ngIf="phone.touched && phone.errors?.['pattern']">enter a correct phone</div>
+ </form>
+ {{f.value | json}}
+ <br><br><br><br><br><br><br><br><br><br>
+    <div class="calculator">
+     <input [(ngModel)]="input2" type="input" readonly>
+     <div class="row">
+      <button (click)="changeinput('1')">1</button>
+      <button (click)="changeinput('2')">2</button>
+      <button (click)="changeinput('3')">3</button>
+      <button (click)="changeinput('+')">+</button>
+     </div>
+     <div class="row">
+      <button (click)="changeinput('4')">4</button>
+      <button (click)="changeinput('5')">5</button>
+      <button (click)="changeinput('6')">6</button>
+      <button (click)="changeinput('-')">-</button>
+     </div>
+ <div class="row">
+      <button (click)="changeinput('7')">7</button>
+      <button (click)="changeinput('8')">8</button>
+      <button (click)="changeinput('9')">9</button>
+      <button (click)="changeinput('/')">/</button>
+     </div>
+     <div class="row">
+      <button (click)="changeinput('.')">.</button>
+      <button (click)="changeinput('0')">0</button>
+      <button (click)="changeinput('=')">=</button>
+      <button (click)="changeinput('CE')">CE</button>
+     </div>
+   </div>
+
